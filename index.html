@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kay - Y</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="window">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/KayYIcon.png" alt="Kay - Y">
+      <div><div class="brand-title">Kay - Y</div><div class="brand-sub">かわいいゲームランチャー</div></div>
+    </div>
+    <button class="nav active" data-page="home">⌂ <span>Home</span></button>
+    <button class="nav" data-page="games">▣ <span>Games</span></button>
+    <button class="nav" data-page="setup">⚙ <span>Gaming Setup</span></button>
+    <button class="nav" data-page="prefixes">▤ <span>Prefixes</span></button>
+    <button class="nav" data-page="settings">◎ <span>Settings</span></button>
+    <div class="sidebar-bottom">Made by Virat K<br><span>TikTok: @viratk_</span></div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="traffic"><i></i><i></i><i></i></div>
+      <div class="header-title">Kay - Y</div>
+    </header>
+
+    <section id="home" class="page active">
+      <div class="intro">
+        <div>
+          <div class="eyebrow">WINDOWS GAMES ON MAC</div>
+          <h1>Ready to play?</h1>
+          <p>Choose a Windows .exe and Kay - Y will prepare the right Wine gaming environment.</p>
+        </div>
+        <button id="chooseTop" class="primary">Choose .exe</button>
+      </div>
+
+      <div class="grid">
+        <div class="card launch-card">
+          <div class="card-head"><div><b>Launch Game</b><span>Run a Windows game with Wine or GPTK.</span></div></div>
+          <label>Game executable</label>
+          <div class="file-row"><input id="exe" readonly placeholder="No .exe selected"><button id="choose" class="secondary">Choose</button></div>
+          <div class="two">
+            <label>Graphics backend<select id="backend"><option>Auto</option><option>GPTK</option><option>Wine</option></select></label>
+            <label>Prefix name<input id="prefix" placeholder="Game name"></label>
+          </div>
+          <label>Arguments<input id="args" placeholder="Optional launch arguments"></label>
+          <label>Working directory<input id="cwd" placeholder="Defaults to the game's folder"></label>
+          <div class="actions"><button id="launch" class="primary">▶ Run Game</button><button id="install" class="secondary">Install as .app</button></div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><div><b>System Status</b><span>Detected runtime availability.</span></div></div>
+            <div class="status"><span>●</span><div><b id="runtime">Checking...</b><small id="runtimeDetail">Select a game to diagnose graphics.</small></div></div>
+            <div class="status"><span>●</span><div><b>Wine Prefixes</b><small>Stored in your macOS Application Support folder.</small></div></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><b>Quick Actions</b><span>Common Kay - Y tasks.</span></div></div>
+            <button class="wide" id="setupBtn">⚙ Gaming Setup</button>
+            <button class="wide" id="prefixBtn">▤ Open Prefixes</button>
+            <button class="wide" id="appsBtn">▣ Open Applications</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="info card"><b>How it works</b><span>Kay - Y keeps each game in its own Wine prefix, detects common Direct3D APIs, and can install a launcher .app into your Applications folder.</span></div>
+    </section>
+
+    <section id="games" class="page"><div class="page-title"><h2>Games</h2><p>Choose a Windows executable and launch it from Kay - Y.</p></div><div class="card empty"><div class="big-symbol">▣</div><b>Your game library is ready</b><span>Use Choose .exe to start a game.</span><button id="chooseGames" class="primary">Choose .exe</button></div></section>
+    <section id="setup" class="page"><div class="page-title"><h2>Gaming Setup</h2><p>Prepare the macOS environment used by Windows games.</p></div><div class="card"><b>Game Porting Toolkit</b><span>On Apple Silicon, Kay - Y can open Terminal and run the standard Rosetta and GPTK setup commands.</span><button id="setupPage" class="primary">Open Gaming Setup</button></div></section>
+    <section id="prefixes" class="page"><div class="page-title"><h2>Prefixes</h2><p>Each game gets its own Wine prefix.</p></div><div class="card"><b>Wine Prefixes</b><span>Open the Kay - Y prefix directory in Finder.</span><button id="prefixPage" class="primary">Open Prefixes</button></div></section>
+    <section id="settings" class="page"><div class="page-title"><h2>Settings</h2><p>Kay - Y preferences and app information.</p></div><div class="card"><b>About Kay - Y</b><span>A lightweight macOS launcher for Windows .exe games and apps.</span><strong>Made by Virat K</strong><span>TikTok: @viratk_</span></div></section>
+  </main>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>

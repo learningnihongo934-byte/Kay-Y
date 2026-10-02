@@ -1,0 +1,33 @@
+{
+  "name": "kay-y",
+  "version": "1.0.0",
+  "description": "Kay - Y macOS Windows game launcher",
+  "main": "main.js",
+  "author": "Virat K",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac dmg zip"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.viratk.kayy",
+    "productName": "Kay - Y",
+    "artifactName": "Kay-Y-${version}-${arch}.${ext}",
+    "mac": {
+      "category": "public.app-category.games",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "KayYIcon.png"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache/**"
+    ]
+  }
+}
