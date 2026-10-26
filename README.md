@@ -2,7 +2,7 @@
 
 A kawaii macOS launcher for Windows games using Wine, Game Porting Toolkit, and D3DMetal.
 
-Made by Virat K.
+Made by **Virat Reddy Kaukuntla** ([@learningnihongo934-byte](https://github.com/learningnihongo934-byte))
 
 ## Download
 
